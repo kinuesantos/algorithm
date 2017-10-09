@@ -1,9 +1,8 @@
-const repeat= (str,num, i=0)=>{
+const repeat= (str,num,newStr='',i=0)=>{
   if(i==num){
-    return;
+    return newStr;
   }
-  console.log(str);
-  return repeat(str,num,i+1);
+  newStr=newStr+str;
+  return repeat(str,num,newStr,i+1);
 }
-
-repeat('hello world', 4);
+module.exports= repeat;
