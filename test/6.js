@@ -1,6 +1,7 @@
 const callX2= require('../solutions/6.js');
 
 const testing = (num)=>{
+  let compare = true;
   let count = 0;
   const hello = (a)=>{
     console.log(a);
