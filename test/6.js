@@ -5,7 +5,6 @@ const testing = (num)=>{
   let passing = true;
 
   const hello = (a)=>{
-    console.log(a);
     count+=1;
     if(a!=count){
       passing= false;
