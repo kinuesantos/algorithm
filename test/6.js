@@ -1,14 +1,18 @@
 const callX2= require('../solutions/6.js');
 
 const testing = (num)=>{
-  let compare = true;
-  let count = 0;
+  let count = 0; 
+  let passing = true;
+
   const hello = (a)=>{
     console.log(a);
     count+=1;
+    if(a!=count){
+      passing= false;
+    }
   }
   callX2(hello,num);
-  if(count==num){
+  if(count==num && passing==true){
     console.log('correct');
   }else{
     console.log('wrong');
