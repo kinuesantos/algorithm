@@ -1,15 +1,8 @@
-const hello=(num)=>{
-  console.log(num);
-}
-
-const callX2=(func,num,i=0)=>{
+const callX2=(func,num,i=1)=>{
+  func(i);
   if(i==num){
     return;
   }
-  func(num);
   return callX2(func,num,i+1);
 }
-
-callX2(hello,3);
-
-
+module.exports= callX2;
