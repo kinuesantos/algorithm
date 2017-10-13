@@ -11,7 +11,7 @@ const callFuncBig = (func,num1, num2,biggest, i=1)=>{
   }else{
   biggest = num2;
   }
-  if(i==biggest){
+  if(i>biggest){
     return;
   }
   func(i);
