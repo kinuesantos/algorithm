@@ -9,4 +9,4 @@ const testing = (num,primeOrNot)=>{
 }
 testing(10,false);
 testing(23,true);
-testing(1,true);
+testing(1,false);
