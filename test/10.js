@@ -6,18 +6,17 @@ const test = (num1,num2,biggest)=>{
 
   const hello = (i)=>{
     count+=1;
+    console.log(count);
     if(count!=i){
       compare= false;
     }
 }
 callFuncBig(hello,num1,num2);
-if(compare==true && biggest==(count+1)){
-    console.log('correct!');
+if(compare==true && biggest==count){
+  console.log('correct!');
   }else{
     console.log('wrong');
   }
 }
 
 test(3,2,3);
-test(2,-2,2);
-test(0,1,1);
