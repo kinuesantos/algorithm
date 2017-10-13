@@ -1,14 +1,14 @@
-const isPrime=(num,i=2,result=false)=>{
-  if(i>num){
-    return result;
+const isPrime=(num,i=2)=>{
+  if(num==1){
+    return false;
   }
   if(num%i==0){
-    result = false;
     if(i==num){
-      result = true;
+      return true;
+    }else{
+      return false;
     }
-    return result;
-}
-  return isPrime(num,i+1,result);
+  }
+  return isPrime(num,i+1);
 }
 module.exports= isPrime;
