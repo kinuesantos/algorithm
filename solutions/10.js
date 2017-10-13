@@ -1,7 +1,3 @@
-const hello=()=>{
-  console.log('kinue');
-}
-
 const callFuncBig = (func,num1, num2,biggest, i=1)=>{
   if(num1<0 &&num2<0){
     return;
