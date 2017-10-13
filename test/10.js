@@ -1,19 +1,23 @@
 const callFuncBig = require('../solutions/10.js');
 
-let count = 0;
+const test = (num1,num2,biggest)=>{
+  let compare = true;
+  let count = 0;
 
-const hello = ()=>{
-  count = count + 1;
+  const hello = (i)=>{
+    count+=1;
+    if(count!=i){
+      compare= false;
+    }
 }
-
-const test = (func,num1,num2,result)=>{
-  if(callFuncBig(func,num1,num2)==result){
-    console.log('correct your function was called '+ result +' times!');
+callFuncBig(hello,num1,num2);
+if(compare==true && biggest==(count+1)){
+    console.log('correct!');
   }else{
     console.log('wrong');
   }
 }
 
-test(hello,5,4,5);
-test(hello,21,14,21);
-test(hello,0,1,1);
+test(3,2,3);
+test(2,-2,2);
+test(0,1,1);
