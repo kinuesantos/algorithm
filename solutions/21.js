@@ -1,9 +1,7 @@
-const factorial = (num, fact=1)=>{
-  if(num==1){
-    return fact;
+const factorial = (num)=>{
+  if(num==0){
+    return 1;
   }
-  fact= fact* num;
-  return factorial(num-1,fact);
+  return num*factorial(num-1);
 }
-
-module.exports= factorial;
+module.exports=factorial;
