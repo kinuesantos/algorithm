@@ -1,13 +1,10 @@
-const findMax=(obj,max=0)=>{
-  if(obj.next==null){
-    if(obj.val>max){
-        max=obj.val;
-    }
-  return max;
-  }
+const findMax=(obj,head=obj,max=obj.val)=>{
   if(obj.val>max){
     max = obj.val;
   }
-  return findMax(obj.next,max);
+if(obj.next==null || obj.next==head){
+  return max;
+}
+  return findMax(obj.next,head,max);
 }
 module.exports=findMax;

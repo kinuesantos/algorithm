@@ -6,9 +6,16 @@ const test = (obj,result)=>{
     console.log(`wrong the result is ${result}`);
   }
 }
-const a = {val:64,next:{val:75,next:{val:90,next:null}}};
+const a = {val:-64,next:{val:-75,next:{val:-90,next:null}}};
 const b = {val:52,next:{val:66,next:null}};
-const c = {val:32,next:{val:33,next:{val:10, next:null}}}
-test(a, 90);
+
+const c = {val:32}
+d={val:33}
+e={val:34}
+c['next']=d;
+d['next']=e;
+e['next']=c
+
+test(a,-64);
 test(b,66);
-test(c,33)
+test(c,34)
