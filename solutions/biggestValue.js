@@ -1,10 +1,10 @@
-const biggestValue=(obj,objKeys=Object.keys(obj),i=0,maxKey=objKeys[i])=>{
+const biggestValue=(obj,objKeys=Object.keys(obj),i=0,maxVal=objKeys[i])=>{
   if(i==objKeys.length){
-    return maxKey;
+    return maxVal;
   }
-  if(obj[objKeys[i]]>obj[maxKey]){
-    maxKey=objKeys[i];
+  if(obj[objKeys[i]]>obj[maxVal]){
+    maxVal=objKeys[i];
   }
-  return biggestValue(obj,objKeys,i+1,maxKey);
+  return biggestValue(obj,objKeys,i+1,maxVal);
 }
 module.exports=biggestValue;
