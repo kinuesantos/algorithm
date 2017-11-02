@@ -6,8 +6,8 @@ const test = (obj,result)=>{
     console.log(`wrong the result is ${result}`);
   }
 }
-const a = {val:-64,next:{val:-75,next:{val:-90,next:null}}};
-const b = {val:52,next:{val:66,next:null}};
+const a = {val:-64,next:{val:-75,next:{val:-90}}};
+const b = {val:52,next:{val:66}};
 
 const c = {val:32}
 d={val:33}
