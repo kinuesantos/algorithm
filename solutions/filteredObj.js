@@ -1,8 +1,10 @@
-const filtObj=(obj,key,value)=>{
-  const func = (key,value,obj)=>{
-    obj[key]=value;
-    return obj;
+const filterObj=(obj,func,objKeys=Object.keys(obj),i=0,newObj={})=>{
+  if(i==objKeys.length){
+    return newObj;
   }
-  return func(key,value,obj);
+  key=objKeys[i];
+  value=obj[objKeys[i]]
+  func(key,value,objKeys,newObj);
+  return filterObj(obj,func,objKeys,i+1,newObj);
 }
-module.exports=filtObj;
+module.exports= filterObj;
