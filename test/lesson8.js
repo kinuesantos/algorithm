@@ -8,14 +8,12 @@ const test = (obj,result)=>{
 }
 const a = {val:-64,next:{val:-75,next:{val:-90}}};
 const b = {val:52,next:{val:66}};
-
-const c = {val:32}
-d={val:33}
-e={val:34}
+const c = {val:32};
+d={val:33};
+e={val:34};
 c['next']=d;
 d['next']=e;
-e['next']=c
-
+e['next']=c;
 test(a,-64);
 test(b,66);
-test(c,34)
+test(c,34);
